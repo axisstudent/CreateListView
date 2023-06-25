@@ -1,0 +1,30 @@
+{% include 'index.html' %}
+{% load static %}
+<!-- {% load crispy_forms_tags %} -->
+
+{% block content %}
+
+
+{% if search %} 
+  
+        {% for s in people %}
+     <center><h3 class="list-group " style="width:50%;"><li style="color:black;height:50px;"  class="m-2 list-group-item bg-info">Found</li></h3></center>
+
+<center><ul class="list-group" style="width:50%;">
+     
+  <li style="color:black;height:50px;"  class="m-2 list-group-item bg-info">{{s.name}}</li>
+
+</ul></center>z
+     {% endfor %}
+ 
+{% else %}
+     <center><h3 class="list-group " style="width:50%;"><li style="color:black;height:50px;"  class="m-2 list-group-item bg-info"> Not Found</li></h3></center>
+   {% endif %}
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,22 @@
+<nav>
+   
+
+        <li><a href="#">Home</a></li>
+        <li><a href="#">List</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Create</a></li>
+        <li><a href="#">Search</a></li>
+        <form class="d-flex" action="{% url 'searchis_base' %}" method="POST">
+            {% csrf_token %}
+            <input type="search" placeholder="Search" aria-label="Search">
+            <button class="submit" class="btn-outline-secondary"></button>
+
+        </form>
+
+        
+
+
+            
+    </ul>
+</form>
+</nav>

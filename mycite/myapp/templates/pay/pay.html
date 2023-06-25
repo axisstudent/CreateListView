@@ -1,0 +1,40 @@
+{% include 'index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="text-continer">
+    <h1>To'laganlar ro'yxati</h1>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Surname</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+{% for x in tolaganlar %}
+
+{% comment %} <center>
+    <ul>
+        <li><a href="{% url 'myapp:delete' x.id %}">Delete</a><a href="{% url 'myapp:update' x.id %}">Update</a></li>
+    </ul>
+</center> {% endcomment %}
+
+    <tbody>
+      <tr>
+        <th scope="row">{{x.id}}</th>
+        <td>{{x.name}}</td>
+        <td>{{x.surname}}</td>
+        <td>{{x.email}}</td>
+      </tr>
+    </tbody>
+
+  
+  {% endfor %}
+
+</table>
+{% endblock %}

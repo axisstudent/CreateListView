@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+.btn1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 9rem;
+    height: 3rem;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
+}
+.btn1::before {
+    content: '';
+    width: 0;
+    height: 3rem;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image:linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+.btn1:hover::before{
+    width: 9em;
+}
+.container button a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 15.5px;
+    text-decoration: none;
+}
+.table{
+    justify-content: center;
+    text-align: center;
+}
+.text-continer h1{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 28px;
+    font-family: 'Poppins' sans-serif;
+}
+.knopka{
+    display: flex;
+    align-items: center;
+}
+.btn-primary{
+    padding: 7px 28px;
+    border-radius: 8px;
+    margin-top: 22px;
+}
